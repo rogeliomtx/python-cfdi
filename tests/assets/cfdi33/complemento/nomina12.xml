@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd"
+    Version="3.3" Fecha="2017-05-01T01:23:59"
+    NoCertificado="40001000000300000337" Sello="" Certificado=""
+    Moneda="MXN" SubTotal="1000" Total="1500"
+  TipoDeComprobante="I" FormaPago="02"
+    LugarExpedicion="45079" >
+    <cfdi:Emisor Rfc=" AAA010101AAA" RegimenFiscal="622"/>
+    <cfdi:Receptor Rfc="BASJ600902KL9" UsoCFDI="G03"/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto ClaveProdServ="01010101" ClaveUnidad="C81" Cantidad="1.5"
+    Descripcion="ACERO" ValorUnitario="1500000" Importe="2250000" />
+    </cfdi:Conceptos>
+  <cfdi:Impuestos />
+  <cfdi:Complemento>
+    <nomina12:Nomina
+  xmlns:nomina12="http://www.sat.gob.mx/nomina12"
+  xsi:schemaLocation="http://www.sat.gob.mx/nomina12 http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina12.xsd"
+  Version="1.2" TipoNomina="O" FechaPago="2016-10-15" FechaInicialPago="2016-10-01" FechaFinalPago="2016-10-15" NumDiasPagados="15" TotalPercepciones="123.45" TotalDeducciones="123.45" TotalOtrosPagos="123.45">
+      <nomina12:Emisor Curp="OAAJ840102HJCVRN00" RegistroPatronal="E23-12345-12-1" RfcPatronOrigen="AAA010101AAA">
+        <nomina12:EntidadSNCF OrigenRecurso="IP" MontoRecursoPropio="123.45" />
+      </nomina12:Emisor>
+      <nomina12:Receptor Curp="OAAJ840102HJCVRN00" NumSeguridadSocial="123456789012345" FechaInicioRelLaboral="2013-04-11" Antigüedad="P3Y2M23D" TipoContrato="01" Sindicalizado="Sí" TipoJornada="02" TipoRegimen="03" NumEmpleado="001" Departamento="001" Puesto="Programador" RiesgoPuesto="3" PeriodicidadPago="04" Banco="002" CuentaBancaria="1234567890" SalarioBaseCotApor="123.45" SalarioDiarioIntegrado="123.45" ClaveEntFed="AGU">
+        <nomina12:SubContratacion RfcLabora="AAA010101AAA" PorcentajeTiempo="23.45" />
+        <nomina12:SubContratacion RfcLabora="BBB010101AAA" PorcentajeTiempo="13.45" />
+      </nomina12:Receptor>
+      <nomina12:Percepciones TotalSueldos="123.45" TotalSeparacionIndemnizacion="123.45" TotalJubilacionPensionRetiro="123.45" TotalGravado="123.45" TotalExento="123.45">
+        <nomina12:Percepcion TipoPercepcion="001" Clave="AAA" Concepto="Sueldo Regular" ImporteGravado="89.00" ImporteExento="90.00">
+          <nomina12:AccionesOTitulos ValorMercado="12345.67" PrecioAlOtorgarse="123.45" />
+          <nomina12:HorasExtra Dias="2" TipoHoras="01" HorasExtra="8" ImportePagado="228.45" />
+          <nomina12:HorasExtra Dias="2" TipoHoras="02" HorasExtra="8" ImportePagado="228.45" />
+        </nomina12:Percepcion>
+        <nomina12:Percepcion TipoPercepcion="005" Clave="BBB" Concepto="Sueldo Regular" ImporteGravado="89.00" ImporteExento="90.00">
+          <nomina12:HorasExtra Dias="2" TipoHoras="01" HorasExtra="8" ImportePagado="288.45" />
+          <nomina12:HorasExtra Dias="2" TipoHoras="03" HorasExtra="8" ImportePagado="288.45" />
+        </nomina12:Percepcion>
+        <nomina12:JubilacionPensionRetiro TotalUnaExhibicion="223.45" TotalParcialidad="223.45" MontoDiario="223.45" IngresoAcumulable="223.45" IngresoNoAcumulable="223.45" />
+        <nomina12:SeparacionIndemnizacion TotalPagado="323.45" NumAñosServicio="7" UltimoSueldoMensOrd="323.45" IngresoAcumulable="323.45" IngresoNoAcumulable="323.45" />
+      </nomina12:Percepciones>
+      <nomina12:Deducciones TotalOtrasDeducciones="123.45" TotalImpuestosRetenidos="123.45">
+        <nomina12:Deduccion TipoDeduccion="001" Clave="XXX" Concepto="Deduccion Semanal" Importe="10.00" />
+        <nomina12:Deduccion TipoDeduccion="100" Clave="YYY" Concepto="Deduccion Semanal" Importe="10.00" />
+      </nomina12:Deducciones>
+      <nomina12:OtrosPagos>
+        <nomina12:OtroPago TipoOtroPago="001" Clave="003" Concepto="Otro pago 111" Importe="1234.56">
+          <nomina12:SubsidioAlEmpleo SubsidioCausado="1234.56" />
+          <nomina12:CompensacionSaldosAFavor SaldoAFavor="12345.67" Año="2016" RemanenteSalFav="1234.56" />
+        </nomina12:OtroPago>
+        <nomina12:OtroPago TipoOtroPago="002" Clave="003" Concepto="Otro pago 222" Importe="1234.56">
+          <nomina12:SubsidioAlEmpleo SubsidioCausado="1234.56" />
+          <nomina12:CompensacionSaldosAFavor SaldoAFavor="123.45" Año="2016" RemanenteSalFav="123.45" />
+        </nomina12:OtroPago>
+      </nomina12:OtrosPagos>
+      <nomina12:Incapacidades>
+        <nomina12:Incapacidad DiasIncapacidad="1" TipoIncapacidad="01" ImporteMonetario="22.45" />
+        <nomina12:Incapacidad DiasIncapacidad="2" TipoIncapacidad="02" ImporteMonetario="22.45" />
+      </nomina12:Incapacidades>
+    </nomina12:Nomina>
+    <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="ea8152af-b116-4812-817a-3b4f9617c99c" FechaTimbrado="2017-05-10T15:22:28" RfcProvCertif="AAA010101AAA" SelloCFD="KsM7MmEbGNBW90sP7QnrqJwt/gJVithjKP9+Vmnm3wLZUl6nG4skH/o1H5M8z7vM7jbuam2fB8C1+DYx927r4p9vbarTY0HAHe4F63WiEQPCSV5dLz1RWCteLhF2Z6mir1DJTGlSHJ9bpHVjyEvuI/X+4a5TcgcFUfxDbAvHr9L+BwfYUKGnok8qFgucswOBUcAJZQvTfO14ZrXFv3noMSU55po05xhhiWy+jAjjF9N2q5eIgI5YyRH1fjdrpjWNoBIO5B/sfNJW/YD0HYkyDOWR1gnzJNJd/S5TiGlAHpsNGtONCQYsAi+ou0rb5IJhfIOzO2pAfz7rI7Lsp9KLtA==" NoCertificadoSAT="20001000000100005761" SelloSAT="etZ7vYz5xSa9q/nFCbFr1m09De27xWNJha+KpVoBhCtQwu4M9fPE6t9MvuiwGRRi+Oe9xsQcQoYK21IL80ALxPA2+8u8CU25IV98KTEEgcbGhEl4m9kq8q0kZhdudu8VeUKhwBl7QFftP0TftJVBQs112a/yJLFIe6ONtVow9hU=" />
+  </cfdi:Complemento>
+</cfdi:Comprobante>
